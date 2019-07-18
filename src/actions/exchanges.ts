@@ -13,3 +13,16 @@ export const loadCurrencies = () => {
         }
     };
 };
+
+export const loadUSDMarket = () => {
+    return {
+        type: Actions.App.UsdMarket.Request,
+        payload: {
+            client: 'public',
+            request: {
+                method: 'get',
+                url: API.App.UsdMarket,
+            }
+        }
+    };
+};

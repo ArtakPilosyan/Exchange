@@ -2,15 +2,20 @@ import * as Actions from '../constants/actions';
 import { handleActions } from 'redux-actions';
 import { ProgressStatus } from "../constants/general";
 import Currency from "../models/Currency";
+import Market from "../models/Market";
 
 export interface ExchangesStoreState {
     currenciesState?: ProgressStatus,
     currenciesList?: Array<Currency>,
+    usdMarketState?: ProgressStatus;
+    usdMarketList?: Array<Market>
 }
 
 export const initialState: ExchangesStoreState = {
     currenciesState: ProgressStatus.None,
-    currenciesList: null
+    currenciesList: null,
+    usdMarketState: ProgressStatus.None,
+    usdMarketList: null,
 };
 
 export default handleActions<ExchangesStoreState, any>({
@@ -30,7 +35,27 @@ export default handleActions<ExchangesStoreState, any>({
 
     [Actions.App.Currencies.Fail]: (state, action) => {
         return Object.assign({}, state, {
-            currenciesState: ProgressStatus.Failed,
+            usdMarketState: ProgressStatus.Failed,
+        });
+    },
+
+    [Actions.App.UsdMarket.Request]: (state, action: any) => {
+        return Object.assign({}, state, {
+            usdMarketState: ProgressStatus.Loading,
+        });
+    },
+
+    [Actions.App.UsdMarket.Success]: (state, action) => {
+        const data = action.payload.data.market as Array<Market>;
+        return Object.assign({}, state, {
+            usdMarketState: ProgressStatus.Success,
+            usdMarketList: data,
+        });
+    },
+
+    [Actions.App.UsdMarket.Fail]: (state, action) => {
+        return Object.assign({}, state, {
+            usdMarketState: ProgressStatus.Failed,
         });
     },
 }, initialState);

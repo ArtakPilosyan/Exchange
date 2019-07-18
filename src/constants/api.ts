@@ -1,6 +1,7 @@
 const API = {
     App: {
-        Currencies: '/currencies'
+        Currencies: '/currencies',
+        UsdMarket: '/market'
     }
 };
 

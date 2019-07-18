@@ -11,3 +11,89 @@ body {
     color: #00acac;
     font-weight: bold;
 }
+
+
+/* < for data-table sort icons>*/
+
+.react-bs-table .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.react-bs-table .dropup, .dropdown {
+    position: relative;
+}
+
+.react-bs-table .dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    content: "";
+}
+
+.registrar-home .type-image {
+    margin-left: 32px;
+}
+
+table th, table td {
+    border: none!important;
+}
+
+table tr {
+    /*border-bottom: 1px solid #747d8a;*/
+}
+
+.react-bs-container-header {
+    border: none!important;
+}
+
+tbody, thead {
+    border: none!important;
+}
+
+.react-bs-table  {
+    border: none!important;
+}
+
+.expand-table tbody, .expand-table thead {
+    color: #343a40;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #d6e0e2;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: white;
+}
+
+.test-status {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.react-bs-table-no-data {
+    text-align: center!important;
+}
+
+.pagination .page-link {
+    background-color: #6a768c;
+    color: #ebebeb;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #4798d0;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #6a768c;
+    color: #c2c2c2;
+}
+
+/* </ for data-table sort icons>*/

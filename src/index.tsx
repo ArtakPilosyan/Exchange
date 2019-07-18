@@ -5,10 +5,12 @@ import { Router, Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { configureStore } from './store';
 import { AppLayout } from './containers/App';
-import { RootState } from "./reducers/index";
+import { RootState, ExchangesInitialState } from "./reducers/index";
 import ROUTES from "./constants/routes";
 
-const persistedState: RootState = {};
+const persistedState: RootState = {
+    exchanges: ExchangesInitialState,
+};
 
 const store = configureStore(persistedState);
 const history = createBrowserHistory();

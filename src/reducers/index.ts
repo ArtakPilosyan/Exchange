@@ -1,5 +1,12 @@
 import { combineReducers } from "redux";
+import exchanges, { ExchangesStoreState, initialState as exchangesInitialState } from './exchanges';
 
-export interface RootState {}
+export interface RootState {
+    exchanges: ExchangesStoreState;
+}
 
-export default combineReducers<RootState>({});
+export const ExchangesInitialState = exchangesInitialState;
+
+export default combineReducers<RootState>({
+    exchanges
+});

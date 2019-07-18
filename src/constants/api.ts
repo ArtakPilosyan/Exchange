@@ -1,5 +1,7 @@
 const API = {
-    App: {}
+    App: {
+        Currencies: '/currencies'
+    }
 };
 
 export default API;

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --debug --devtool cheap-module-source-map --output-pathinfo --history-api-fallback --inline --progress --colors --port 3000",
+    "start": "webpack-dev-server --debug --devtool cheap-module-source-map --output-pathinfo --history-api-fallback --hot --inline --progress --colors --port 3000",
     "build": "webpack -p --progress --colors"
   },
   "license": "MIT",

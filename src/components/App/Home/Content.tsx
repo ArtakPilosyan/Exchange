@@ -1,6 +1,7 @@
 import * as React from "react";
 import { connect } from 'react-redux';
 import { RootState } from "../../../reducers/index";
+import PageTitle from "../shared/PageTitle";
 
 
 export interface OwnProps {}
@@ -18,6 +19,7 @@ export class Content extends React.Component<Props, State> {
     render() {
         return (
             <div className="home-page container-fluid">
+                <PageTitle pageTitle="USD Exchange"/>
                 React App
             </div>
         );

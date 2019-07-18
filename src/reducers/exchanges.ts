@@ -9,6 +9,7 @@ export interface ExchangesStoreState {
     currenciesList?: Array<Currency>,
     usdMarketState?: ProgressStatus;
     usdMarketList?: Array<Market>
+    tableData?: Array<any>;
 }
 
 export const initialState: ExchangesStoreState = {
@@ -16,6 +17,7 @@ export const initialState: ExchangesStoreState = {
     currenciesList: null,
     usdMarketState: ProgressStatus.None,
     usdMarketList: null,
+    tableData: null,
 };
 
 export default handleActions<ExchangesStoreState, any>({
@@ -56,6 +58,12 @@ export default handleActions<ExchangesStoreState, any>({
     [Actions.App.UsdMarket.Fail]: (state, action) => {
         return Object.assign({}, state, {
             usdMarketState: ProgressStatus.Failed,
+        });
+    },
+
+    [Actions.App.changeTableData]: (state, action: any) => {
+        return Object.assign({}, state, {
+            tableData: action.payload.data,
         });
     },
 }, initialState);

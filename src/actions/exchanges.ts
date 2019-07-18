@@ -26,3 +26,12 @@ export const loadUSDMarket = () => {
         }
     };
 };
+
+export const tableData = (data: Array<any>) => {
+    return {
+        type: Actions.App.changeTableData,
+        payload: {
+            data: data
+        }
+    };
+};

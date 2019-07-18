@@ -4,6 +4,8 @@ const CSS = [
     { folder: 'bootstrap', file: 'bootstrap/dist/css/bootstrap.min.css' },
     { folder: 'bootstrap', file: 'bootstrap/dist/css/bootstrap.min.css.map' },
 
+    { folder: 'react-bootstrap-table', file: 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css' },
+
     { folder: 'font-awesome', file: 'font-awesome/css/font-awesome.min.css' },
     { folder: 'fonts', file: 'font-awesome/fonts/' },
 ];

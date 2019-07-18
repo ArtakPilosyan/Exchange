@@ -9,4 +9,5 @@ export const App = {
         Success: '@APP@CURRENCIES@MARKET@LIST_SUCCESS',
         Fail: '@APP@CURRENCIES@MARKET@LIST_FAIL',
     },
+    changeTableData: '@APP@CHANGE@TABLE@DATA',
 };

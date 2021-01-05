@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "awesome-typescript-loader": "3.4.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "4.0.0-alpha.6",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
